@@ -622,8 +622,11 @@ namespace stdr_server {
       description.kinematicModel.type = "ideal";
 
     namedRobot.robot = description;
-
-    namedRobot.name = "robot" + boost::lexical_cast<std::string>(_id++);
+	
+		if(description.name != "")
+    	namedRobot.name = description.name;
+		else
+    	namedRobot.name = "robot" + boost::lexical_cast<std::string>(_id++);
 
     _robotMap.insert( std::make_pair(namedRobot.name, namedRobot) );
 

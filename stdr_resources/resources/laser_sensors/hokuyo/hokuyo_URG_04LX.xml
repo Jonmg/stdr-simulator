@@ -2,12 +2,12 @@
   <laser_specifications>
     <max_angle>2.09439510239</max_angle>
     <min_angle>-2.09439510239</min_angle>
-    <max_range>4.09</max_range>
+    <max_range>6.09</max_range>
     <min_range>0.06</min_range>
     <num_rays>667</num_rays>
     <frequency>10</frequency>
     <pose>
-      <x>0</x>
+      <x>0.3</x>
       <y>0</y>
       <theta>0</theta>
     </pose>

@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
   stdr_robot::HandleRobot handler;
   
   //!< add
-  if (((argc == 3) || (argc == 6)) && (std::string(argv[1]) == "add")) {
+  if (((argc == 3) || (argc == 6) || (argc == 7)) && (std::string(argv[1]) == "add")) {
     
     stdr_msgs::RobotMsg msg;
     
@@ -54,6 +54,13 @@ int main(int argc, char** argv) {
     }
     
     if (argc == 6) {
+      msg.initialPose.x = atof(argv[3]);
+      msg.initialPose.y = atof(argv[4]);
+      msg.initialPose.theta = atof(argv[5]);
+    }
+
+    if (argc == 7) {
+      msg.name = argv[6];
       msg.initialPose.x = atof(argv[3]);
       msg.initialPose.y = atof(argv[4]);
       msg.initialPose.theta = atof(argv[5]);

@@ -1,3 +1,5 @@
+string name
+
 geometry_msgs/Pose2D initialPose
 
 stdr_msgs/FootprintMsg footprint
